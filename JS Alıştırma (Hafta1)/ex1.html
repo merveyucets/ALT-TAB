@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Prompt Example</title>
+  </head>
+  <body>
+
+    <script>
+//Klavyeden  girilen 20 adet sayıdan çift sayıların toplamının tek sayıların toplamına oranını bulan program 
+
+      var toplamCiftSayilar = 0;
+      var toplamTekSayilar = 0;
+
+      for (var i = 0; i < 20; i++) {
+        var sayi = parseInt(prompt("Lütfen bir sayı girin:")); //parseInt : alınan değeri integer yapar.
+        if (sayi % 2 === 0) {
+            toplamCiftSayilar += sayi;                        //prompt : input görevi yapar. 
+        } else {
+          toplamTekSayilar += sayi;
+        }
+      }
+
+      var oran = toplamCiftSayilar / toplamTekSayilar;
+      console.log("Çift sayıların toplamı:", toplamCiftSayilar);
+      console.log("Tek sayıların toplamı:", toplamTekSayilar);
+      console.log(
+        "Çift sayıların toplamı / Tek sayıların toplamı oranı:",
+        oran
+      );
+    </script>
+  </body>
+</html>

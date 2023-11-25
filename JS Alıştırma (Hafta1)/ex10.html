@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Prompt Example</title>
+  </head>
+  <body>
+
+    <script>
+  //Girilen sayının orijinal sayı olup olmadığını bulan program
+  
+  function isOriginalNumber(originalNumber, number){
+    if(originalNumber===number){
+      console.log(`${number} is original number.`);
+    }
+    else{
+      console.log(`${number} is not original number.`);
+    }
+  }
+  var originalNumber = parseInt(prompt("enter a value for original number:"));
+  var number= parseInt(prompt("enter a value for number: "));
+  
+  isOriginalNumber(originalNumber,number);
+
+    </script>
+  </body>
+</html>

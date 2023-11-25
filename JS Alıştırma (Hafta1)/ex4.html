@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Prompt Example</title>
+  </head>
+  <body>
+
+    <script>
+  //Girilen decimal sayıyı binary sayıya çeviren algoritma
+
+  function decimalToBinary(decimal){
+    var binary="";
+    while(decimal>0){
+      var kalan = decimal%2;
+      binary= kalan + binary;
+      decimal= Math.floor(decimal/2);
+
+    }
+    return binary;
+  }
+
+  var decimal = 10;
+  var decimalRepresentation = decimalToBinary(decimal);
+  console.log(`${decimal} sayısının binary değeri: ${decimalRepresentation}`);
+    
+    </script>
+  </body>
+</html>

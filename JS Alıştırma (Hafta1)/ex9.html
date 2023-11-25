@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Prompt Example</title>
+  </head>
+  <body>
+    <script>
+      //1'den 63'e kadar olan sayılar arasında istenilen sayıyı maksimum 6 seferde bulan program
+      function sayiTahmini(seciliSayi) {
+        var min = 1;
+        var max = 63;
+
+        for (i = 0; i < 6; i++) {
+          var tahmin = Math.floor(min + max) / 2;
+          cevap = parseInt(
+            prompt(
+              `tuttuğunuz sayı ${tahmin} mi? (evetse 1, hayırsa 0 yazınız)`
+            )
+          );
+          if (cevap == 1) {
+            prompt(`${i+1}. seferde tuttuğunuz sayıyı bulduk.`);
+            break;
+          } else {
+            var yakinlik = parseInt(
+              prompt(`tuttuğunuz sayı ${tahmin}den büyük mü (1), küçük mü (0)`)
+            );
+            if (yakinlik == 1) {
+              min = tahmin + 1;
+            } else {
+              max = tahmin - 1;
+            }
+          }
+        }
+      }
+
+      var seciliSayi = parseInt(prompt("1 ile 63 arasında bir sayı seçiniz."));
+      sayiTahmini(seciliSayi);
+    </script>
+  </body>
+</html>
